@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixie · Claude Code in motion</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/mascot.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-glyph">✻</span>
+      <span class="brand-name">Pixie</span>
+      <span class="brand-tag">in motion</span>
+    </div>
+    <div class="crumbs" id="cwd" title="Working directory"></div>
+    <div class="spacer"></div>
+    <span class="chip" id="provider-chip" title="Provider"></span>
+    <span class="chip model" id="model-chip" title="Model"></span>
+    <button class="icon-btn" id="new-chat" title="New chat">＋</button>
+    <button class="icon-btn" id="theme-btn" title="Toggle theme">◐</button>
+    <button class="icon-btn" id="settings-btn" title="Settings">⚙</button>
+  </header>
+
+  <main class="layout">
+    <section class="chat">
+      <div id="transcript" class="transcript"></div>
+      <div class="composer">
+        <textarea id="input" rows="1" placeholder="Ask Pixie to build, fix, explain, or run something…" autocomplete="off"></textarea>
+        <button id="stop" class="btn stop" hidden title="Stop">■ Stop</button>
+        <button id="send" class="btn send" title="Send (Enter)">Send</button>
+      </div>
+    </section>
+
+    <aside class="stage">
+      <div class="mascot-frame">
+        <canvas id="mascot-canvas" aria-hidden="true"></canvas>
+      </div>
+      <div class="mascot-label" id="mascot-label">Resting</div>
+      <div class="mascot-detail" id="mascot-detail"></div>
+      <div class="sr-only" id="mascot-live" aria-live="polite"></div>
+      <div class="stage-hint">The mascot acts out what Pixie is doing.</div>
+    </aside>
+  </main>
+
+  <footer class="status">
+    <span id="status-provider">...</span>
+    <span class="sep">·</span>
+    <span id="status-model">...</span>
+    <span class="sep">·</span>
+    <span id="status-approval">ask first</span>
+    <span class="sep">·</span>
+    <span id="status-tokens">↑0 ↓0</span>
+    <span class="spacer"></span>
+    <span id="status-conn">connecting…</span>
+  </footer>
+
+  <div class="overlay" id="settings-overlay"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

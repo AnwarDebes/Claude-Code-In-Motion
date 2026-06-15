@@ -1,0 +1,41 @@
+{
+  "name": "pixie-code",
+  "version": "0.1.0",
+  "description": "Pixie - Claude Code, in motion, for any model. A local coding agent with a bring-your-own-key, any-provider backend and an animated pixel mascot that acts out what the agent is doing.",
+  "type": "module",
+  "bin": {
+    "pixie": "bin/pixie.js"
+  },
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node bin/pixie.js",
+    "test": "node --test test/*.test.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "web",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "coding-agent",
+    "claude",
+    "openai",
+    "gemini",
+    "ollama",
+    "openrouter",
+    "llm",
+    "cli",
+    "pixel-art",
+    "mascot"
+  ],
+  "author": "Anwar Debes",
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" font-family="'JetBrains Mono','SF Mono','DejaVu Sans Mono',monospace" shape-rendering="crispEdges">
+  <defs>
+    <!-- the coral creature, drawn once and reused -->
+    <g id="pixie">
+      <rect x="9" y="4" width="2" height="4" fill="#d97757"/>
+      <rect x="8" y="3" width="3" height="2" fill="#e8a085"/>
+      <rect x="21" y="4" width="2" height="4" fill="#d97757"/>
+      <rect x="21" y="3" width="3" height="2" fill="#e8a085"/>
+      <rect x="7" y="8" width="18" height="16" fill="#d97757"/>
+      <rect x="6" y="9" width="20" height="14" fill="#d97757"/>
+      <rect x="8" y="9" width="16" height="2" fill="#e8a085"/>
+      <rect x="7" y="21" width="18" height="2" fill="#b85d40"/>
+      <rect x="11" y="13" width="3" height="4" fill="#2b2a27"/>
+      <rect x="18" y="13" width="3" height="4" fill="#2b2a27"/>
+      <rect x="12" y="13" width="1" height="1" fill="#f4efe2"/>
+      <rect x="19" y="13" width="1" height="1" fill="#f4efe2"/>
+      <rect x="9" y="24" width="2" height="4" fill="#b85d40"/>
+      <rect x="13" y="24" width="2" height="4" fill="#b85d40"/>
+      <rect x="17" y="24" width="2" height="4" fill="#b85d40"/>
+      <rect x="21" y="24" width="2" height="4" fill="#b85d40"/>
+    </g>
+  </defs>
+
+  <!-- panel -->
+  <rect x="6" y="6" width="1188" height="308" rx="18" fill="#1a1915" stroke="#34322a" stroke-width="2"/>
+  <!-- faint pixel scanlines on the left, behind the hero -->
+  <g opacity="0.06" fill="#d97757">
+    <rect x="40" y="40" width="280" height="2"/>
+    <rect x="40" y="90" width="280" height="2"/>
+    <rect x="40" y="140" width="280" height="2"/>
+    <rect x="40" y="190" width="280" height="2"/>
+    <rect x="40" y="240" width="280" height="2"/>
+  </g>
+
+  <!-- hero mascot -->
+  <use href="#pixie" transform="translate(78,92) scale(4.3)"/>
+  <!-- motion arcs / thought dots to imply it is animated -->
+  <g fill="#d97757">
+    <rect x="232" y="120" width="8" height="8" opacity="0.9"/>
+    <rect x="248" y="104" width="10" height="10" opacity="0.6"/>
+    <rect x="266" y="86" width="12" height="12" opacity="0.35"/>
+  </g>
+
+  <!-- title + tagline -->
+  <text x="318" y="118" font-size="70" font-weight="700" fill="#edeae0" letter-spacing="1">Pixie</text>
+  <text x="320" y="158" font-size="21" fill="#d97757">Claude Code, in motion. For any model.</text>
+
+  <!-- stat pills -->
+  <g font-size="14" fill="#a8a69b">
+    <rect x="320" y="186" width="196" height="30" rx="15" fill="#211d18" stroke="#34322a"/>
+    <text x="338" y="206">0 runtime dependencies</text>
+    <rect x="528" y="186" width="118" height="30" rx="15" fill="#211d18" stroke="#34322a"/>
+    <text x="546" y="206">6 providers</text>
+    <rect x="658" y="186" width="176" height="30" rx="15" fill="#211d18" stroke="#34322a"/>
+    <text x="676" y="206">bring your own key</text>
+  </g>
+
+  <!-- a small note tying the hero to the idea -->
+  <text x="320" y="252" font-size="14" fill="#75736b">The mascot acts out what the agent is doing, live.</text>
+
+  <!-- activity filmstrip: the unique story, one frame per state -->
+  <g>
+    <!-- frame 1: thinking -->
+    <rect x="902" y="44" width="64" height="64" rx="8" fill="#15140f" stroke="#34322a"/>
+    <use href="#pixie" transform="translate(916,58) scale(1.25)"/>
+    <rect x="950" y="52" width="4" height="4" fill="#d97757"/>
+    <rect x="956" y="48" width="5" height="5" fill="#d97757" opacity="0.6"/>
+    <text x="934" y="124" font-size="11" fill="#75736b" text-anchor="middle">think</text>
+
+    <!-- frame 2: typing at a laptop -->
+    <rect x="978" y="44" width="64" height="64" rx="8" fill="#15140f" stroke="#34322a"/>
+    <use href="#pixie" transform="translate(992,52) scale(1.15)"/>
+    <rect x="996" y="92" width="32" height="4" fill="#b85d40"/>
+    <rect x="999" y="84" width="26" height="9" fill="#2b2a27"/>
+    <rect x="1001" y="86" width="22" height="5" fill="#bfe0e8"/>
+    <text x="1010" y="124" font-size="11" fill="#75736b" text-anchor="middle">type</text>
+
+    <!-- frame 3: searching with a magnifier -->
+    <rect x="1054" y="44" width="64" height="64" rx="8" fill="#15140f" stroke="#34322a"/>
+    <use href="#pixie" transform="translate(1064,58) scale(1.2)"/>
+    <circle cx="1101" cy="86" r="8" fill="none" stroke="#2b2a27" stroke-width="3"/>
+    <circle cx="1101" cy="86" r="4" fill="#bfe0e8"/>
+    <rect x="1106" y="91" width="9" height="4" fill="#2b2a27" transform="rotate(45 1106 91)"/>
+    <text x="1086" y="124" font-size="11" fill="#75736b" text-anchor="middle">search</text>
+
+    <!-- frame 4: debugging a bug -->
+    <rect x="902" y="136" width="64" height="64" rx="8" fill="#15140f" stroke="#34322a"/>
+    <use href="#pixie" transform="translate(912,150) scale(1.2)"/>
+    <ellipse cx="950" cy="186" rx="7" ry="5" fill="#4a4640"/>
+    <rect x="948" y="180" width="2" height="2" fill="#e0594e"/>
+    <rect x="942" y="184" width="3" height="2" fill="#4a4640"/>
+    <rect x="955" y="184" width="3" height="2" fill="#4a4640"/>
+    <text x="934" y="216" font-size="11" fill="#75736b" text-anchor="middle">debug</text>
+
+    <!-- frame 5: done -->
+    <rect x="978" y="136" width="64" height="64" rx="8" fill="#15140f" stroke="#34322a"/>
+    <use href="#pixie" transform="translate(988,150) scale(1.2)"/>
+    <path d="M 1024 178 l 5 6 l 10 -12" fill="none" stroke="#7db36a" stroke-width="4" stroke-linecap="square"/>
+    <rect x="1019" y="160" width="3" height="3" fill="#f0c674"/>
+    <rect x="1037" y="166" width="3" height="3" fill="#f0c674"/>
+    <text x="1010" y="216" font-size="11" fill="#75736b" text-anchor="middle">done</text>
+
+    <!-- providers strip label -->
+    <text x="1086" y="160" font-size="12" fill="#a8a69b" text-anchor="middle">Claude</text>
+    <text x="1086" y="176" font-size="12" fill="#a8a69b" text-anchor="middle">OpenAI</text>
+    <text x="1086" y="192" font-size="12" fill="#a8a69b" text-anchor="middle">Gemini</text>
+    <text x="1086" y="208" font-size="11" fill="#75736b" text-anchor="middle">+ more</text>
+  </g>
+</svg>
