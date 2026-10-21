@@ -328,6 +328,18 @@ export class Mascot {
       this._rect(27, 19, 1, 1, PALETTE.green);
       this._rect(28, 18, 1, 1, PALETTE.green);
     }
+    if (state === "waiting") {
+      // a speech bubble with a "?": Pixie is waiting for your go-ahead
+      const lift = this.reduced ? 0 : Math.sin(t * 2.4) * 0.4;
+      const qx = bx + 15.4, qy = by - 3.4 + lift;
+      this._rect(qx, qy, 6.2, 6, PALETTE.white);
+      this._rect(qx - 0.6, qy + 0.6, 7.4, 4.8, PALETTE.white);
+      this._rect(qx - 1.4, qy + 4.4, 1.4, 1.2, PALETTE.white); // tail
+      this._rect(qx + 1.6, qy + 0.9, 3, 1, PALETTE.body);
+      this._rect(qx + 3.6, qy + 1.9, 1, 1, PALETTE.body);
+      this._rect(qx + 2.6, qy + 2.6, 1, 1.2, PALETTE.body);
+      if (this.reduced || Math.floor(t * 2) % 2 === 0) this._rect(qx + 2.6, qy + 4.4, 1, 0.9, PALETTE.body);
+    }
     if (state === "error") {
       // sweat drop
       this._rect(bx + 13, by + 2, 1, 1.6, PALETTE.glass);

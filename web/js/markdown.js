@@ -29,7 +29,9 @@ function inline(text) {
   s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>");
   // Underscore-italic intentionally omitted: it mangles snake_case identifiers.
-  s = s.replace(new RegExp(SENT + "(\\d+)" + SENT, "g"), (_, i) => `<code>${escapeHtml(codes[+i])}</code>`);
+  // The code text was captured from the already-escaped string, so it must not
+  // be escaped a second time (that would show &quot; instead of a quote).
+  s = s.replace(new RegExp(SENT + "(\\d+)" + SENT, "g"), (_, i) => `<code>${codes[+i]}</code>`);
   return s;
 }
 

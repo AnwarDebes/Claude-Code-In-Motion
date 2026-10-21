@@ -17,6 +17,7 @@ const state = {
   asstKey: null,
   totalIn: 0,
   totalOut: 0,
+  pending: new Map(), // approval id -> the tool activity to resume once allowed
 };
 
 let mascot, transcript, settings;
@@ -68,6 +69,7 @@ function connect() {
       state.step = -1;
       state.asstKey = null;
       state.totalIn = 0; state.totalOut = 0;
+      state.pending.clear();
       setMascot("thinking", "Thinking…");
       return;
     }
@@ -109,10 +111,17 @@ function connect() {
 
   on("approval_request", (d) => {
     transcript.approvalRequest(d.id, d);
-    setMascot("thinking", "Waiting for your approval…");
+    state.pending.set(d.id, { activity: d.activity, title: d.title });
+    setMascot("waiting", "Waiting for your approval…");
   });
 
-  on("approval_resolved", (d) => transcript.approvalResolved(d.id, d.decision));
+  on("approval_resolved", (d) => {
+    transcript.approvalResolved(d.id, d.decision);
+    const p = state.pending.get(d.id);
+    state.pending.delete(d.id);
+    // Once allowed, go back to acting out the tool that is now running.
+    if (p && d.decision !== "deny" && state.busy) setMascot(p.activity || "running", p.title);
+  });
 
   on("usage", (d) => {
     state.totalIn = d.totalInput; state.totalOut = d.totalOutput;
