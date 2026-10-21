@@ -1,0 +1,46 @@
+name: Live demo
+
+# Publishes the browser UI from web/ to GitHub Pages, with demo/replay.js
+# standing in for the local server so it can replay a recorded session.
+
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", "demo/**", ".github/workflows/demo.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble the demo site
+        run: |
+          mkdir -p _site
+          cp -r web/. _site/
+          cp demo/session.js demo/replay.js _site/
+          sed -i 's#<meta charset="utf-8" />#<meta charset="utf-8" />\n  <script src="session.js"></script>\n  <script src="replay.js"></script>#' _site/index.html
+          grep -q 'src="replay.js"' _site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
