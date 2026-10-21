@@ -42,6 +42,10 @@ paste your own API key. Nothing is sent anywhere except to the provider you chos
 The twist: instead of a spinner, Pixie shows you an animated pixel mascot that
 reflects what it is doing in real time, so you can follow along at a glance.
 
+<p align="center">
+  <img src="assets/mascot-states.png" width="100%" alt="Pixie's ten poses: thinking, reading, searching, editing, typing, running, debugging, waiting for your approval, done, and something failed.">
+</p>
+
 | The agent is... | The mascot... |
 | --- | --- |
 | thinking | looks up while little thought-dots rise |
