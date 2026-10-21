@@ -5,6 +5,27 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-10-21
+
+### Added
+
+- A live demo on GitHub Pages: the real browser UI from `web/` replaying a
+  recorded session in your browser, with no server, model or key. You approve
+  or deny the edit yourself.
+- A waiting pose for the mascot. While Pixie waits for your approval it holds
+  up a speech bubble with a question mark, instead of looking busy.
+- A promo video at the top of the README.
+
+### Fixed
+
+- Inline code in replies was escaped twice, so a quote showed up as `&quot;`.
+- After you approve an action, the mascot goes back to acting out the tool that
+  is now running instead of staying on "waiting for approval".
+- The UI no longer scrolls sideways on phones: long tool summaries and the top
+  bar shrink to fit.
+- The OpenRouter referer header and the README badges point at this
+  repository.
+
 ## [0.1.0] - 2026-06-15
 
 ### Added
@@ -25,4 +46,5 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
   all three provider families (mocked), the agent loop with approvals, the
   markdown renderer, and the mascot state machine.
 
-[0.1.0]: https://github.com/AnwarDebes/pixie/releases/tag/v0.1.0
+[0.1.1]: https://github.com/AnwarDebes/Claude-Code-In-Motion/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/AnwarDebes/Claude-Code-In-Motion/releases/tag/v0.1.0

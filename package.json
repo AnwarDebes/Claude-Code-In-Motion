@@ -1,6 +1,6 @@
 {
   "name": "pixie-code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pixie - Claude Code, in motion, for any model. A local coding agent with a bring-your-own-key, any-provider backend and an animated pixel mascot that acts out what the agent is doing.",
   "type": "module",
   "bin": {
@@ -37,5 +37,13 @@
   ],
   "author": "Anwar Debes",
   "license": "MIT",
+  "homepage": "https://anwardebes.github.io/Claude-Code-In-Motion/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnwarDebes/Claude-Code-In-Motion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnwarDebes/Claude-Code-In-Motion/issues"
+  },
   "dependencies": {}
 }
