@@ -11,7 +11,7 @@ import { PROVIDERS } from "./providers/index.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const WEB_DIR = path.join(__dirname, "..", "web");
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
