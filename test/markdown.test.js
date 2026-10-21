@@ -15,6 +15,13 @@ test("renders bold, italic and inline code", () => {
   assert.match(renderMarkdown("run `npm test`"), /<code>npm test<\/code>/);
 });
 
+test("inline code is escaped exactly once", () => {
+  const out = renderMarkdown('split on `"="` and keep `a < b && c`');
+  assert.match(out, /<code>&quot;=&quot;<\/code>/);
+  assert.match(out, /<code>a &lt; b &amp;&amp; c<\/code>/);
+  assert.ok(!out.includes("&amp;quot;"));
+});
+
 test("does not mangle snake_case or plain digits", () => {
   const out = renderMarkdown("use snake_case_name with 3 args and step 1");
   assert.match(out, /snake_case_name/);

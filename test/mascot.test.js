@@ -38,6 +38,14 @@ test("draws all states without throwing and actually paints", async () => {
   assert.ok(fillRects() > 0, "mascot paints pixels");
 });
 
+test("waiting draws a question bubble that idle does not", async () => {
+  const { canvas, fillRects } = stubDom();
+  const { Mascot } = await import("../web/js/mascot.js");
+  const m = new Mascot(canvas, { onLabel() {} });
+  const paint = (s) => { m.state = s; const n = fillRects(); m._draw(1000); return fillRects() - n; };
+  assert.ok(paint("waiting") > paint("idle"), "waiting paints extra pixels");
+});
+
 test("success is one-shot and reverts to idle", async () => {
   const { canvas } = stubDom();
   const { Mascot } = await import("../web/js/mascot.js");
