@@ -37,7 +37,7 @@ export async function streamChat(opts) {
   const headers = { "content-type": "application/json" };
   if (apiKey) headers["authorization"] = `Bearer ${apiKey}`;
   if (provider === "openrouter") {
-    headers["HTTP-Referer"] = "https://github.com/AnwarDebes/pixie";
+    headers["HTTP-Referer"] = "https://github.com/AnwarDebes/Claude-Code-In-Motion";
     headers["X-Title"] = "Pixie";
   }
 
