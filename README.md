@@ -26,9 +26,16 @@ debugging.
   <a href="#how-it-works">How it works</a>
 </p>
 
+<a href="https://youtu.be/hGQPpCX1xEo"><img src="assets/pixie-preview.webp" width="100%" alt="Meet Pixie. It acts out every step, live: reading, then typing. Click to watch the video with sound on YouTube."></a>
+
+<sub>▶ [Watch it with sound on YouTube](https://youtu.be/hGQPpCX1xEo). The session in the video is the real UI from <code>web/</code> replaying a recorded run, not a mockup.</sub>
+
+<details>
+<summary>▶ Or play it here on GitHub</summary>
+
 https://github.com/user-attachments/assets/d4fe63eb-93f0-4408-9867-dc253bb104a8
 
-<sub>The session in the video is the real UI from <code>web/</code> replaying a recorded run, not a mockup. Sound on.</sub>
+</details>
 
 ---
 
