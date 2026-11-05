@@ -20,6 +20,10 @@ debugging.
 </p>
 
 <p align="center">
+This project now continues in <a href="https://github.com/AnwarDebes/glassbox-studio"><b>Glassbox Studio</b></a>, the coding agent that shows its work. <a href="https://anwardebes.github.io/glassbox-studio/">Open the live app</a>.
+</p>
+
+<p align="center">
   <a href="https://anwardebes.github.io/Claude-Code-In-Motion/"><b>Try the live demo</b></a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#safety">Safety</a> ·
