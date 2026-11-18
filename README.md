@@ -31,9 +31,9 @@ This project now continues in <a href="https://github.com/AnwarDebes/glassbox-st
   <a href="#how-it-works">How it works</a>
 </p>
 
-<a href="https://youtu.be/hGQPpCX1xEo"><img src="assets/pixie-preview.webp" width="100%" alt="Meet Pixie. It acts out every step, live: reading, then typing. Click to watch the video with sound on YouTube."></a>
+<a href="https://youtube.com/shorts/lJlUewL-bcg"><img src="assets/pixie-preview.webp" width="100%" alt="Meet Pixie. It acts out every step, live: reading, then typing. Click to watch the video with sound on YouTube."></a>
 
-<sub>▶ [Watch it with sound on YouTube](https://youtu.be/hGQPpCX1xEo). The session in the video is the real UI from <code>web/</code> replaying a recorded run, not a mockup.</sub>
+<sub>▶ [Watch it with sound on YouTube](https://youtube.com/shorts/lJlUewL-bcg). The session in the video is the real UI from <code>web/</code> replaying a recorded run, not a mockup.</sub>
 
 <details>
 <summary>▶ Or play it here on GitHub</summary>
