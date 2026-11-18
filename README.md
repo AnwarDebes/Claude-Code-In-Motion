@@ -25,6 +25,7 @@ This project now continues in <a href="https://github.com/AnwarDebes/glassbox-st
 
 <p align="center">
   <a href="https://anwardebes.github.io/Claude-Code-In-Motion/"><b>Try the live demo</b></a> ·
+  <a href="https://anwardebes.github.io/shorts/#pixie">Watch it in 37 seconds</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#safety">Safety</a> ·
   <a href="#how-it-works">How it works</a>
